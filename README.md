@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-		canvasEditor = findViewById(R.id.canvasEditor)
+	canvasEditor = findViewById(R.id.canvasEditor)
     }
 }
 ```
