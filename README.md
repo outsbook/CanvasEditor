@@ -32,6 +32,7 @@ import com.outsbook.libs.canvaseditor.CanvasEditorView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var canvasEditor: CanvasEditorView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -45,6 +46,7 @@ import com.outsbook.libs.canvaseditor.CanvasEditorView;
 
 public class MainActivity extends AppCompatActivity {
     private CanvasEditorView canvasEditor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
