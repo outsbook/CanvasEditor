@@ -55,4 +55,4 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-Now you are ready for play with `CanvasEditor`
+Now you are ready to play with `CanvasEditor`
