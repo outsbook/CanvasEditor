@@ -10,7 +10,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
-        versionName "0.1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -23,6 +23,7 @@ android {
         }
     }
 
+    tasks.withType(Javadoc).all { enabled = false }
 }
 
 dependencies {
@@ -34,3 +35,34 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+ext {
+    bintrayRepo = 'CanvasEditor' // Repo name in bintray dashboard
+    bintrayName = 'com.outsbook.libs.canvaseditor' // package name of the bintray repo
+
+    publishedGroupId = 'com.outsbook.libs'   // this is the ID we want to see in implementation line
+    libraryName = 'canvaseditor'     // this is the module name of library
+    artifact = 'canvaseditor'        // this is the artifact we want to see in implementation line
+
+    libraryDescription = 'A Canvas/Image Editor library with easy support for canvas/image editing using paints, drawable sticker, and text sticker in Android (Kotlin).' // description of library
+
+    siteUrl = 'https://github.com/outsbook/CanvasEditor'    // git repo url
+    gitUrl = 'https://github.com/outsbook/CanvasEditor.git' // git repo vcs url
+
+    libraryVersion = '1.0.0'      // library version
+
+    developerId = 'outsbook'                // This is your bintray username
+    developerName = 'Shahin ShamS'              // Developer's name
+    developerEmail = 'shamscse@gmail.com'                // Developer's email
+
+    licenseName = 'The Apache Software License, Version 2.0'  // for example, The Apache Software License, Version 2.0
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'   // for example, http://www.apache.org/licenses/LICENSE-2.0.txt
+    allLicenses = ["Apache-2.0"]    // array of licenses, for example, ["Apache-2.0"]
+}
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
+
+//commands
+//  ./gradlew install
+//  ./gradlew bintrayUpload
