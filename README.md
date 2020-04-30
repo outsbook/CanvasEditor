@@ -65,8 +65,8 @@ Now you are ready to play with `CanvasEditor`
 #### 1. setPaintColor(color: Int)
 ##### Kotlin
 ```kotlin
-	val color = ContextCompat.getColor(this, R.color.colorBlack)
-	canvasEditor.setPaintColor(color)
+val color = ContextCompat.getColor(this, R.color.colorBlack)
+canvasEditor.setPaintColor(color)
 ```
 ##### Java
 ```java
