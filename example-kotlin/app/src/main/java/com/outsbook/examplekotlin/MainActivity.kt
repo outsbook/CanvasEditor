@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         buttonUndo.imageAlpha = 50
         buttonRedo.imageAlpha = 50
 
-        canvasEditView.setListener(object: CanvasEditorListener {
+        canvasEditorView.setListener(object: CanvasEditorListener {
             override fun onEnableUndo(isEnable: Boolean) {
                 buttonUndo.imageAlpha = if(isEnable) 255 else 50
             }
@@ -29,66 +29,66 @@ class MainActivity : AppCompatActivity() {
         })
 
         //set stroke width
-        canvasEditView.setStrokeWidth(strokeWidth)
+        canvasEditorView.setStrokeWidth(strokeWidth)
         //set paint color
-        canvasEditView.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
+        canvasEditorView.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
 
         buttonSticker.setOnClickListener{
             //Add drawable sticker
             val drawable = ContextCompat.getDrawable(this, R.drawable.app_icon)
-            canvasEditView.addDrawableSticker(drawable!!)
+            canvasEditorView.addDrawableSticker(drawable!!)
         }
 
         buttonText.setOnClickListener{
             //Add text sticker
             val color = ContextCompat.getColor(this, R.color.colorPrimary)
-            canvasEditView.addTextSticker("Canvas", color, null)
+            canvasEditorView.addTextSticker("Canvas", color, null)
         }
 
         buttonStickerText.setOnClickListener{
             //Add text with drawable sticker
             val drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp)
             val color = ContextCompat.getColor(this, R.color.colorAccent)
-            canvasEditView.addDrawableTextSticker(drawable!!, "Canvas", color, null)
+            canvasEditorView.addDrawableTextSticker(drawable!!, "Canvas", color, null)
         }
 
         buttonBlack.setOnClickListener {
             buttonPlus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_plus_black_24dp))
             buttonMinus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_minus_black_24dp))
-            canvasEditView.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
+            canvasEditorView.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
         }
 
         buttonYellow.setOnClickListener {
             buttonPlus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_plus_yellow_24dp))
             buttonMinus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_minus_yellow_24dp))
-            canvasEditView.setPaintColor(ContextCompat.getColor(this, R.color.colorYellow))
+            canvasEditorView.setPaintColor(ContextCompat.getColor(this, R.color.colorYellow))
         }
 
         buttonPlus.setOnClickListener {
             strokeWidth += 10f
-            canvasEditView.setStrokeWidth(strokeWidth)
+            canvasEditorView.setStrokeWidth(strokeWidth)
         }
 
         buttonMinus.setOnClickListener {
             strokeWidth -= 10f
-            canvasEditView.setStrokeWidth(strokeWidth)
+            canvasEditorView.setStrokeWidth(strokeWidth)
         }
 
         buttonSave.setOnClickListener {
-            val bitmap = canvasEditView.downloadBitmap()
+            val bitmap = canvasEditorView.downloadBitmap()
             showPreview(bitmap)
         }
 
         buttonUndo.setOnClickListener {
-            canvasEditView.undo()
+            canvasEditorView.undo()
         }
 
         buttonDelete.setOnClickListener {
-            canvasEditView.removeAll()
+            canvasEditorView.removeAll()
         }
 
         buttonRedo.setOnClickListener {
-            canvasEditView.redo()
+            canvasEditorView.redo()
         }
 
         buttonClose.setOnClickListener {
