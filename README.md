@@ -16,3 +16,24 @@ implementation 'com.outsbook.libs:canvaseditor:1.0.0'
   <type>pom</type>
 </dependency>
 ```
+
+## Setup the CanvasEditor
+##### Add the `CanvasEditorView` to your Activity/Fragment layout
+```xml
+<com.outsbook.libs.canvaseditor.CanvasEditorView
+        android:id="@+id/canvasEditor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+```
+##### Get the `CanvasEditor` in your Activity
+```kotlin
+private lateinit var canvasEditor: CanvasEditorView
+
+override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        canvasEditor = findViewById(R.id.canvasEditor)
+}
+```
+Now you are ready for play with `CanvasEditor'
