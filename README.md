@@ -70,19 +70,19 @@ Now you are ready to play with `CanvasEditor`
 ```
 ##### Java
 ```java
-	int color = ContextCompat.getColor(this, R.color.colorBlack);
-	canvasEditor.setPaintColor(color);
+int color = ContextCompat.getColor(this, R.color.colorBlack);
+canvasEditor.setPaintColor(color);
 ```
 #### 2. setStrokeWidth(strokeWidth: Float)
 ##### Kotlin
 ```kotlin
-	val strokeWidth = 20f
-	canvasEditor.setStrokeWidth(strokeWidth)
+val strokeWidth = 20f
+canvasEditor.setStrokeWidth(strokeWidth)
 ```
 ##### Java
 ```java
-	float strokeWidth = 20f;
-	canvasEditor.setStrokeWidth(strokeWidth);
+float strokeWidth = 20f;
+canvasEditor.setStrokeWidth(strokeWidth);
 ```
 ## Drawable/Bitmap Sticker
 | # |  Method | Action  |
@@ -92,30 +92,30 @@ Now you are ready to play with `CanvasEditor`
 ### 1. addDrawableSticker(drawable: Drawable)
 ##### Kotlin
 ```kotlin
-	val drawable = ContextCompat.getDrawable(this, R.drawable.app_icon)
-	drawable?.let{
-		canvasEditor.addDrawableSticker(drawable)
-	}
+val drawable = ContextCompat.getDrawable(this, R.drawable.app_icon)
+drawable?.let{
+    canvasEditor.addDrawableSticker(drawable)
+}
 ```
 ##### Java
 ```java
-	Drawable drawable = ContextCompat.getDrawable(this, R.drawable.app_icon);
-	if(drawable != null){
-		canvasEditor.addDrawableSticker(drawable);
-	}
+Drawable drawable = ContextCompat.getDrawable(this, R.drawable.app_icon);
+if(drawable != null){
+    canvasEditor.addDrawableSticker(drawable);
+}
 ```
 ### 2. fun addBitmapSticker(bitmap: Bitmap)
 ##### Kotlin
 ```kotlin
-	val bitmap = //get your bitmap
-	bitmap?.let{
-		canvasEditor.addBitmapSticker(bitmap)
-	}
+val bitmap = //get your bitmap
+bitmap?.let{
+    canvasEditor.addBitmapSticker(bitmap)
+}
 ```
 ##### Java
 ```java
-	Bitmap bitmap = //get your bitmap
-	if(bitmap != null){
-		canvasEditor.addBitmapSticker(drawable);
-	}
+Bitmap bitmap = //get your bitmap
+if(bitmap != null){
+    canvasEditor.addBitmapSticker(drawable);
+}
 ```
