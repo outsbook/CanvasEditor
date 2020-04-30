@@ -56,3 +56,66 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 Now you are ready to play with `CanvasEditor`
+
+## Drawing
+| # |  Method | Action  |
+| ------------ | ------------ | ------------ |
+| 1 |  setPaintColor(color: Int)  |  Set the brush color to paint |
+| 2 |  setStrokeWidth(strokeWidth: Float) |  Set the brush stroke width to paint |
+#### 1. setPaintColor(color: Int)
+##### Kotlin
+```kotlin
+	val color = ContextCompat.getColor(this, R.color.colorBlack)
+	canvasEditor.setPaintColor(color)
+```
+##### Java
+```java
+	int color = ContextCompat.getColor(this, R.color.colorBlack);
+	canvasEditor.setPaintColor(color);
+```
+#### 2. setStrokeWidth(strokeWidth: Float)
+##### Kotlin
+```kotlin
+	val strokeWidth = 20f
+	canvasEditor.setStrokeWidth(strokeWidth)
+```
+##### Java
+```java
+	float strokeWidth = 20f;
+	canvasEditor.setStrokeWidth(strokeWidth);
+```
+## Drawable/Bitmap Sticker
+| # |  Method | Action  |
+| ------------ | ------------ | ------------ |
+| 1 |  addDrawableSticker(drawable: Drawable)  |  Add drawable sticker to the canvas editor |
+| 2 |  fun addBitmapSticker(bitmap: Bitmap) |  Add bitmap sticker to the canvas editor |
+### 1. addDrawableSticker(drawable: Drawable)
+##### Kotlin
+```kotlin
+	val drawable = ContextCompat.getDrawable(this, R.drawable.app_icon)
+	drawable?.let{
+		canvasEditor.addDrawableSticker(drawable)
+	}
+```
+##### Java
+```java
+	Drawable drawable = ContextCompat.getDrawable(this, R.drawable.app_icon);
+	if(drawable != null){
+		canvasEditor.addDrawableSticker(drawable);
+	}
+```
+### 2. fun addBitmapSticker(bitmap: Bitmap)
+##### Kotlin
+```kotlin
+	val bitmap = //get your bitmap
+	bitmap?.let{
+		canvasEditor.addBitmapSticker(bitmap)
+	}
+```
+##### Java
+```java
+	Bitmap bitmap = //get your bitmap
+	if(bitmap != null){
+		canvasEditor.addBitmapSticker(drawable);
+	}
+```
