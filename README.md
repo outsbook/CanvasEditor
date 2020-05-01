@@ -177,3 +177,27 @@ if(drawable != null){
 ```
 ##### Preview
 ![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_7.png?raw=true)
+
+## Undo/Redo
+| # |  Method | Action  |
+| ------------ | ------------ | ------------ |
+| 1 |  [undo()](#1-undo) |  Undo from canvas editor |
+| 2 |  [redo()](#2-redo) |  Redo to canvas editor |
+#### 1. undo()
+##### Kotlin
+```kotlin
+canvasEditor.undo()
+```
+##### Java
+```java
+canvasEditor.undo();
+```
+#### 2. redo()
+##### Kotlin
+```kotlin
+canvasEditor.redo()
+```
+##### Java
+```java
+canvasEditor.redo();
+```
