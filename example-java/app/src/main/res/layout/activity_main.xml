@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.outsbook.libs.canvaseditor.CanvasEditorView
+        android:id="@+id/canvasEditor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewBottom"/>
+
+    <ImageButton
+        android:id="@+id/buttonUndo"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_undo_white_24dp"
+        android:background="@drawable/shape_undo_bg"
+        android:contentDescription="@string/app_name"
+        android:layout_above="@+id/viewBottom"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="4dp"/>
+
+    <ImageButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete_white_24dp"
+        android:background="@drawable/shape_delete_bg"
+        android:contentDescription="@string/app_name"
+        android:layout_above="@+id/viewBottom"
+        android:layout_marginBottom="4dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/buttonRedo"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_redo_white_24dp"
+        android:background="@drawable/shape_redo_bg"
+        android:contentDescription="@string/app_name"
+        android:layout_above="@+id/viewBottom"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="4dp"/>
+
+    <LinearLayout
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="8"
+        android:background="@color/colorPrimary">
+        <ImageButton
+            android:id="@+id/buttonSticker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_sticker_white_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/buttonText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_text_white_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/buttonStickerText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_sticker_text_white_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/buttonBlack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_color_black_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/buttonYellow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_color_yellow_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent"/>
+        <ImageButton
+            android:id="@+id/buttonPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_plus_black_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/buttonMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_minus_black_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_download_gray_24dp"
+            android:contentDescription="@string/app_name"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageView">
+            <ImageButton
+                android:id="@+id/buttonClose"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_cancel_yellow_24dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
