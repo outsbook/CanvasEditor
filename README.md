@@ -2,7 +2,7 @@
 A Canvas/Image Editor library with easy support for canvas/image editing using paints, drawable sticker, and text sticker in Android. The lib source code writeen using Kotlin language.
 
 ## Index
-|  Title | Methods  |
+|  Title | Description/Methods  |
 | ------------ | ------------ |
 |  [**Getting Started**](#getting-started) | Install the canvas editor library to your project |
 |  [**Setup the Canvas Editor**](#setup-the-canvas-editor) | Setup the canvas editor to your project activity and activity layout |
