@@ -401,6 +401,9 @@ public class MainActivity extends AppCompatActivity {
 - Make required changes and commit to that branch.
 - Generate pull request. Mention all the required description regarding changes you made.
 
+## Maintained by
+Shahin ShamS (GitHub: [outsbook](https://github.com/outsbook/))
+
 ## Licenses
    Copyright(c) 2020, Shahin ShamS
 
@@ -415,6 +418,3 @@ public class MainActivity extends AppCompatActivity {
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
-## Maintained by
-* Shahin Shams (GitHub: outsbook)
