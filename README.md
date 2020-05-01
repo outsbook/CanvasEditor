@@ -105,6 +105,7 @@ if(drawable != null){
 }
 ```
 <h3 id="add-bitmap-sticker"> 2. addBitmapSticker(bitmap: Bitmap)
+
 ##### Kotlin
 ```kotlin
 val bitmap = //get your bitmap
