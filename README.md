@@ -76,6 +76,9 @@ canvasEditor.setPaintColor(color)
 int color = ContextCompat.getColor(this, R.color.colorBlack);
 canvasEditor.setPaintColor(color);
 ```
+##### Preview
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_2.png?raw=true)
+
 #### 2. setStrokeWidth(strokeWidth: Float)
 ##### Kotlin
 ```kotlin
@@ -87,6 +90,9 @@ canvasEditor.setStrokeWidth(strokeWidth)
 float strokeWidth = 20f;
 canvasEditor.setStrokeWidth(strokeWidth);
 ```
+##### Preview
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_3.png?raw=true)
+
 ## Drawable/Bitmap Sticker
 | # |  Method | Action  |
 | ------------ | ------------ | ------------ |
