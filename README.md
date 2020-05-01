@@ -5,7 +5,7 @@ A Canvas/Image Editor library with easy support for canvas/image editing using p
 |  Title | Methods  |
 | ------------ | ------------ |
 |  [**Getting Started**](#getting-started) |   |
-|  [**Setup the CanvasEditor**](#setup-the-canvaseditor) |   |
+|  [**Setup the Canvas Editor**](#setup-the-canvas-editor) |   |
 | [**Drawing**](#drawing) | [1. setPaintColor(color: Int)](#1-setpaintcolorcolor-int)<br/> [2. setStrokeWidth(strokeWidth: Float)](#2-setstrokewidthstrokeWidth-float) |
 | [**Drawable/Bitmap Sticker**](#drawablebitmap-sticker) | [1. addDrawableSticker(drawable: Drawable)](#1-adddrawablestickerdrawable-drawable)<br>[2. addBitmapSticker(bitmap: Bitmap)](#2-addbitmapstickerbitmap-bitmap)|
 | [**Text Sticker**](#text-sticker) | [1. addTextSticker(text: String, textColor: Int, typeface: Typeface?)](#1-addtextStickertext-string-textcolor-int-typeface-typeface)<br>[2. addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)](#2-adddrawabletextstickerdrawable-drawable-text-string-textColor-int-typeface-typeface) |
@@ -28,7 +28,7 @@ implementation 'com.outsbook.libs:canvaseditor:1.0.0'
 </dependency>
 ```
 
-## Setup the CanvasEditor
+## Setup the Canvas Editor
 #### Add the `CanvasEditorView` to your Activity/Fragment layout
 ```xml
 <com.outsbook.libs.canvaseditor.CanvasEditorView
