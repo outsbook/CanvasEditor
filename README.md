@@ -9,6 +9,7 @@ A Canvas/Image Editor library with easy support for canvas/image editing using p
 | [**Drawing**](#drawing) | [1. setPaintColor(color: Int)](#1-setpaintcolorcolor-int)<br/> [2. setStrokeWidth(strokeWidth: Float)](#2-setstrokewidthstrokeWidth-float) |
 | [**Drawable/Bitmap Sticker**](#drawablebitmap-sticker) | [1. addDrawableSticker(drawable: Drawable)](#1-adddrawablestickerdrawable-drawable)<br>[2. addBitmapSticker(bitmap: Bitmap)](#2-addbitmapstickerbitmap-bitmap)|
 | [**Text Sticker**](#text-sticker) | [1. addTextSticker(text: String, textColor: Int, typeface: Typeface?)](#1-addtextStickertext-string-textcolor-int-typeface-typeface)<br>[2. addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)](#2-adddrawabletextstickerdrawable-drawable-text-string-textColor-int-typeface-typeface) |
+| [**Active Sticker Methods**](#active-sticker-methods) | [1. removeActiveSticker()](#1-removeactivesticker)<br>[2. doneActiveSticker()](#2-doneactivesticker)<br>[3. flipActiveSticker()](#3-flipactivesticker)<br>[4. zoomAndRotateActiveSticker(motionEvent: MotionEvent)](#4-zoomandrotateactivestickermotionevent-motionevent) |
 | [**Canvas Editor Methods**](#canvas-editor-methods) | [1. undo()](#1-undo)<br>[2. redo()](#2-redo)<br>[3. removeAll()](#3-removeall)<br>[4. downloadBitmap(): Bitmap](#4-downloadbitmap-bitmap) |
 
 ## Getting Started
@@ -188,6 +189,51 @@ if(drawable != null){
 ##### Preview
 ![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_7.png?raw=true)
 
+## Active Sticker Methods
+| # |  Method | Action  |
+| ------------ | ------------ | ------------ |
+| 1 |  [removeActiveSticker()](#1-removeactivesticker) |  Remove active sticker from canvas editor |
+| 2 |  [doneActiveSticker()](#2-doneactivesticker) |  Editing done of active sticker on canvas editor |
+| 3 |  [flipActiveSticker()](#3-flipactivesticker) |  Flip active sticker on canvas editor |
+| 4 |  [zoomAndRotateActiveSticker(motionEvent: MotionEvent)](#4-zoomandrotateactivestickermotionevent-motionevent) |  Zoom and rotate active sticker with motihn event on canvas editor|
+#### 1. removeActiveSticker()
+##### Kotlin
+```kotlin
+canvasEditor.removeActiveSticker()
+```
+##### Java
+```java
+canvasEditor.removeActiveSticker();
+```
+#### 2. doneActiveSticker()
+##### Kotlin
+```kotlin
+canvasEditor.doneActiveSticker()
+```
+##### Java
+```java
+canvasEditor.doneActiveSticker();
+```
+#### 3. flipActiveSticker()
+##### Kotlin
+```kotlin
+canvasEditor.flipActiveSticker()
+```
+##### Java
+```java
+canvasEditor.flipActiveSticker();
+```
+#### 4. zoomAndRotateActiveSticker(motionEvent: MotionEvent)
+##### Kotlin
+```kotlin
+val motionEvent = //Set your motion event
+canvasEditor.zoomAndRotateActiveSticker(motionEvent)
+```
+##### Java
+```java
+MotionEvent motionEvent = //Set your motion event
+canvasEditor.zoomAndRotateActiveSticker(motionEvent);
+```
 ## Canvas Editor Methods
 | # |  Method | Action  |
 | ------------ | ------------ | ------------ |
