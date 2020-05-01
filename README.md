@@ -4,14 +4,14 @@ A Canvas/Image Editor library with easy support for canvas/image editing using p
 ## Index
 |  Title | Methods  |
 | ------------ | ------------ |
-|  [**Getting Started**](#getting-started) |   |
-|  [**Setup the Canvas Editor**](#setup-the-canvas-editor) |   |
+|  [**Getting Started**](#getting-started) | Install the canvas editor library to your project |
+|  [**Setup the Canvas Editor**](#setup-the-canvas-editor) | Setup the canvas editor to your project activity and activity layout |
 | [**Drawing**](#drawing) | [1. setPaintColor(color: Int)](#1-setpaintcolorcolor-int)<br/> [2. setStrokeWidth(strokeWidth: Float)](#2-setstrokewidthstrokeWidth-float) |
 | [**Drawable/Bitmap Sticker**](#drawablebitmap-sticker) | [1. addDrawableSticker(drawable: Drawable)](#1-adddrawablestickerdrawable-drawable)<br>[2. addBitmapSticker(bitmap: Bitmap)](#2-addbitmapstickerbitmap-bitmap)|
 | [**Text Sticker**](#text-sticker) | [1. addTextSticker(text: String, textColor: Int, typeface: Typeface?)](#1-addtextStickertext-string-textcolor-int-typeface-typeface)<br>[2. addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)](#2-adddrawabletextstickerdrawable-drawable-text-string-textColor-int-typeface-typeface) |
 | [**Active Sticker Methods**](#active-sticker-methods) | [1. removeActiveSticker()](#1-removeactivesticker)<br>[2. doneActiveSticker()](#2-doneactivesticker)<br>[3. flipActiveSticker()](#3-flipactivesticker)<br>[4. zoomAndRotateActiveSticker(motionEvent: MotionEvent)](#4-zoomandrotateactivestickermotionevent-motionevent) |
 | [**Canvas Editor Methods**](#canvas-editor-methods) | [1. undo()](#1-undo)<br>[2. redo()](#2-redo)<br>[3. removeAll()](#3-removeall)<br>[4. downloadBitmap(): Bitmap](#4-downloadbitmap-bitmap) |
-| [**Canvas Editor Callback**](#canvas-editor-callback) |  |
+| [**Canvas Editor Callback**](#canvas-editor-callback) | Set the listener for access callback functions |
 
 ## Getting Started
 To include the library in your project just simply add the dependencies. Choose one from Gradle, and Maven
