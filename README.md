@@ -88,7 +88,7 @@ canvasEditor.setStrokeWidth(strokeWidth);
 | # |  Method | Action  |
 | ------------ | ------------ | ------------ |
 | 1 |  addDrawableSticker(drawable: Drawable)  |  Add drawable sticker to the canvas editor |
-| 2 |  [addBitmapSticker(bitmap: Bitmap)](#2.-addBitmapSticker) |  Add bitmap sticker to the canvas editor |
+| 2 |  [addBitmapSticker(bitmap: Bitmap)](#add-bitmap-sticker) |  Add bitmap sticker to the canvas editor |
 ### 1. addDrawableSticker(drawable: Drawable)
 ##### Kotlin
 ```kotlin
@@ -104,7 +104,7 @@ if(drawable != null){
     canvasEditor.addDrawableSticker(drawable);
 }
 ```
-### 2. addBitmapSticker
+<h3 id="add-bitmap-sticker">2. addBitmapSticker</h3>
 ##### Kotlin
 ```kotlin
 val bitmap = //get your bitmap
