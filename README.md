@@ -171,8 +171,9 @@ drawable?.let{
 Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp);
 String text = "Canvas";
 int textColor = ContextCompat.getColor(this, R.color.colorYellow);
-if(drawable != null)
+if(drawable != null){
     canvasEditor.addDrawableTextSticker(drawable, text, textColor, null);
+}
 ```
 ##### Preview
 ![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_7.png?raw=true)
