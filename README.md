@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 ##### Preview
-<img src = "https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_1.png?raw=true" width="256px" />
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_1.png?raw=true)
 
 Now you are ready to play with `CanvasEditor`
 
