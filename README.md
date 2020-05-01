@@ -104,7 +104,7 @@ if(drawable != null){
     canvasEditor.addDrawableSticker(drawable);
 }
 ```
-<h3 id="add-bitmap-sticker">2. addBitmapSticker</h3>
+<h3 id="add-bitmap-sticker"> 2. addBitmapSticker(bitmap: Bitmap)
 ##### Kotlin
 ```kotlin
 val bitmap = //get your bitmap
