@@ -278,3 +278,118 @@ val bitmap = canvasEditor.downloadBitmap()
 ```java
 Bitmap bitmap = canvasEditor.downloadBitmap();
 ```
+
+## Canvas Editor Callback
+##### Kotlin
+```kotlin
+import com.outsbook.libs.canvaseditor.CanvasEditorView
+import com.outsbook.libs.canvaseditor.listeners.CanvasEditorListener
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var canvasEditor: CanvasEditorView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        canvasEditor = findViewById(R.id.canvasEditor)
+
+        canvasEditor.setListener(object: CanvasEditorListener {
+            override fun onEnableUndo(isEnable: Boolean) {
+                // isEnable = true (undo list is not empty)
+                // isEnable = false (undo list is empty)
+                buttonUndo.imageAlpha = if(isEnable) 255 else 50
+            }
+
+            override fun onEnableRedo(isEnable: Boolean) {
+                // isEnable = true (redo list is not empty)
+                // isEnable = false (redo list is empty)
+                buttonRedo.imageAlpha = if(isEnable) 255 else 50
+            }
+
+            override fun onTouchEvent(event: MotionEvent) {
+                //When the canvas touch
+            }
+
+            override fun onStickerActive() {
+                //When a sticker change to active mode
+            }
+
+            override fun onStickerRemove() {
+                //When a sticker remove from canvas
+            }
+
+            override fun onStickerDone() {
+                //When the active sticker added to canvas
+            }
+
+            override fun onStickerZoomAndRotate() {
+                //When the active sticker zoom or rotate
+            }
+
+            override fun onStickerFlip() {
+                //When the active sticker flip
+            }
+        })
+    }
+}
+```
+##### Java
+```java
+import com.outsbook.libs.canvaseditor.CanvasEditorView;
+import com.outsbook.libs.canvaseditor.listeners.CanvasEditorListener;
+
+public class MainActivity extends AppCompatActivity {
+    private CanvasEditorView canvasEditor;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        canvasEditor = findViewById(R.id.canvasEditor);
+
+        canvasEditor.setListener(new CanvasEditorListener() {
+            @Override
+            public void onEnableUndo(boolean isEnable) {
+                // isEnable = true (undo list is not empty)
+                // isEnable = false (undo list is empty)
+            }
+
+            @Override
+            public void onEnableRedo(boolean isEnable) {
+                // isEnable = true (redo list is not empty)
+                // isEnable = false (redo list is empty)
+            }
+
+            @Override
+            public void onTouchEvent(MotionEvent motionEvent) {
+                //When the canvas touch
+            }
+
+            @Override
+            public void onStickerActive() {
+                //When a sticker change to active mode
+            }
+
+            @Override
+            public void onStickerRemove() {
+                //When a sticker remove from canvas
+            }
+
+            @Override
+            public void onStickerDone() {
+                //When the active sticker added to canvas
+            }
+
+            @Override
+            public void onStickerZoomAndRotate() {
+                //When the active sticker zoom or rotate
+            }
+
+            @Override
+            public void onStickerFlip() {
+                //When the active sticker flip
+            }
+        });
+    }
+}
+```
