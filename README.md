@@ -9,7 +9,7 @@ A Canvas/Image Editor library with easy support for canvas/image editing using p
 | [**Drawing**](#drawing) | [1. setPaintColor(color: Int)](#1-setpaintcolorcolor-int)<br/> [2. setStrokeWidth(strokeWidth: Float)](#2-setstrokewidthstrokeWidth-float) |
 | [**Drawable/Bitmap Sticker**](#drawablebitmap-sticker) | [1. addDrawableSticker(drawable: Drawable)](#1-adddrawablestickerdrawable-drawable)<br>[2. addBitmapSticker(bitmap: Bitmap)](#2-addbitmapstickerbitmap-bitmap)|
 | [**Text Sticker**](#text-sticker) | [1. addTextSticker(text: String, textColor: Int, typeface: Typeface?)](#1-addtextStickertext-string-textcolor-int-typeface-typeface))<br>[2. addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)](#2-adddrawabletextstickerdrawable-drawable-text-string-textColor-int-typeface-typeface)) |
-| [**Canvas Editor Methods**](#canvas-editor-methods) | [1. undo()](#1-undo)<br>[2. redo()](#2-redo)<br>[3. removeAll()](#3-removeall)<br>[downloadBitmap(): Bitmap](#4-downloadbitmap-bitmap) |
+| [**Canvas Editor Methods**](#canvas-editor-methods) | [1. undo()](#1-undo)<br>[2. redo()](#2-redo)<br>[3. removeAll()](#3-removeall)<br>[4. downloadBitmap(): Bitmap](#4-downloadbitmap-bitmap) |
 
 ## Getting Started
 To include the library in your project just simply add the dependencies. Choose one from Gradle, and Maven
