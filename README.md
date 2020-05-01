@@ -161,7 +161,7 @@ canvasEditor.addTextSticker(text, color, null);
 ```kotlin
 val drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp)
 val text = "Canvas"
-val textColor = ContextCompat.getColor(this, R.color.colorAccent)
+val textColor = ContextCompat.getColor(this, R.color.colorYellow)
 drawable?.let{
     canvasEditor.addDrawableTextSticker(it, text, textColor, null)
 }
@@ -170,7 +170,7 @@ drawable?.let{
 ```java
 Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp);
 String text = "Canvas";
-int textColor = ContextCompat.getColor(this, R.color.colorAccent);
+int textColor = ContextCompat.getColor(this, R.color.colorYellow);
 if(drawable != null)
     canvasEditor.addDrawableTextSticker(drawable, text, textColor, null);
 ```
