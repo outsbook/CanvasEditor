@@ -60,8 +60,8 @@ Now you are ready to play with `CanvasEditor`
 ## Drawing
 | # |  Method | Action  |
 | ------------ | ------------ | ------------ |
-| 1 |  setPaintColor(color: Int)  |  Set the brush color to paint |
-| 2 |  setStrokeWidth(strokeWidth: Float) |  Set the brush stroke width to paint |
+| 1 |  [setPaintColor(color: Int)](#1-setpaintcolorcolor-int) |  Set the brush color to paint |
+| 2 |  [setStrokeWidth(strokeWidth: Float)](#2-setstrokewidthstrokeWidth-float) |  Set the brush stroke width to paint |
 #### 1. setPaintColor(color: Int)
 ##### Kotlin
 ```kotlin
@@ -89,7 +89,7 @@ canvasEditor.setStrokeWidth(strokeWidth);
 | ------------ | ------------ | ------------ |
 | 1 |  [addDrawableSticker(drawable: Drawable)](#1-adddrawablestickerdrawable-drawable) |  Add drawable sticker to the canvas editor |
 | 2 |  [addBitmapSticker(bitmap: Bitmap)](#2-addbitmapstickerbitmap-bitmap) |  Add bitmap sticker to the canvas editor |
-### 1. addDrawableSticker(drawable: Drawable)
+#### 1. addDrawableSticker(drawable: Drawable)
 ##### Kotlin
 ```kotlin
 val drawable = ContextCompat.getDrawable(this, R.drawable.app_icon)
