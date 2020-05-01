@@ -132,3 +132,5 @@ if(bitmap != null){
     canvasEditor.addBitmapSticker(drawable);
 }
 ```
+##### Preview
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_5.png?raw=true)
