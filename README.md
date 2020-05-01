@@ -178,11 +178,13 @@ if(drawable != null){
 ##### Preview
 ![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_7.png?raw=true)
 
-## Undo/Redo
+## Canvas Editor Methods
 | # |  Method | Action  |
 | ------------ | ------------ | ------------ |
 | 1 |  [undo()](#1-undo) |  Undo from canvas editor |
 | 2 |  [redo()](#2-redo) |  Redo to canvas editor |
+| 3 |  [removeAll()](#3-removeall) |  Delete everything from canvas editor |
+| 4 |  [downloadBitmap(): Bitmap](#4-downloadbitmap-bitmap) |  Get the canvas as bitmap, you can play with the bitmap :)|
 #### 1. undo()
 ##### Kotlin
 ```kotlin
@@ -200,4 +202,22 @@ canvasEditor.redo()
 ##### Java
 ```java
 canvasEditor.redo();
+```
+#### 3. removeAll()
+##### Kotlin
+```kotlin
+canvasEditor.removeAll()
+```
+##### Java
+```java
+canvasEditor.removeAll();
+```
+#### 4. downloadBitmap(): Bitmap
+##### Kotlin
+```kotlin
+val bitmap = canvasEditor.downloadBitmap()
+```
+##### Java
+```java
+Bitmap bitmap = canvasEditor.downloadBitmap();
 ```
