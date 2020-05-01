@@ -134,3 +134,45 @@ if(bitmap != null){
 ```
 ##### Preview
 ![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_5.png?raw=true)
+
+## Text Sticker
+| # |  Method | Action  |
+| ------------ | ------------ | ------------ |
+| 1 |  [addTextSticker(text: String, textColor: Int, typeface: Typeface?)](#1-addtextStickertext-string-textcolor-int-typeface-typeface)) |  Add text sticker to the canvas editor |
+| 2 |  [addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)](#2-adddrawabletextstickerdrawable-drawable-text-string-textColor-int-typeface-typeface)) |  Add text sticker with drawable background to the canvas editor |
+#### 1. addTextSticker(text: String, textColor: Int, typeface: Typeface?)
+##### Kotlin
+```kotlin
+val text = "Canvas"
+val textColor = ContextCompat.getColor(this, R.color.colorPrimary)
+canvasEditor.addTextSticker(text, textColor, null)
+```
+##### Java
+```java
+String text = "Canvas";
+int color = ContextCompat.getColor(this, R.color.colorPrimary);
+canvasEditor.addTextSticker(text, color, null);
+```
+##### Preview
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_6.png?raw=true)
+
+#### 2. addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)
+##### Kotlin
+```kotlin
+val drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp)
+val text = "Canvas"
+val textColor = ContextCompat.getColor(this, R.color.colorAccent)
+drawable?.let{
+    canvasEditor.addDrawableTextSticker(it, text, textColor, null)
+}
+```
+##### Java
+```java
+Drawable drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp);
+String text = "Canvas";
+int textColor = ContextCompat.getColor(this, R.color.colorAccent);
+if(drawable != null)
+    canvasEditor.addDrawableTextSticker(drawable, text, textColor, null);
+```
+##### Preview
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_7.png?raw=true)
