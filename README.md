@@ -113,6 +113,9 @@ if(drawable != null){
     canvasEditor.addDrawableSticker(drawable);
 }
 ```
+##### Preview
+![](https://github.com/outsbook/CanvasEditor/blob/master/screenshot/screenshot_4.png?raw=true)
+
 #### 2. addBitmapSticker(bitmap: Bitmap)
 
 ##### Kotlin
