@@ -139,42 +139,46 @@ public class MainActivity extends AppCompatActivity {
         canvasEditor.setListener(new CanvasEditorListener() {
             @Override
             public void onEnableUndo(boolean isEnable) {
+                // isEnable = true (undo list is not empty)
+                // isEnable = false (undo list is empty)
                 buttonUndo.setImageAlpha(isEnable? 255 : 50);
             }
 
             @Override
             public void onEnableRedo(boolean isEnable) {
+                // isEnable = true (redo list is not empty)
+                // isEnable = false (redo list is empty)
                 buttonRedo.setImageAlpha(isEnable? 255 : 50);
             }
 
             @Override
             public void onTouchEvent(MotionEvent motionEvent) {
-
+                //When the canvas touch
             }
 
             @Override
             public void onStickerActive() {
-
+                //When a sticker change to active mode
             }
 
             @Override
             public void onStickerRemove() {
-
+                //When a sticker remove from canvas
             }
 
             @Override
             public void onStickerDone() {
-
+                //When the active sticker added to canvas
             }
 
             @Override
             public void onStickerZoomAndRotate() {
-
+                //When the active sticker zoom or rotate
             }
 
             @Override
             public void onStickerFlip() {
-
+                //When the active sticker flip
             }
         });
     }

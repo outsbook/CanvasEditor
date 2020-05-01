@@ -1,8 +1,8 @@
 package com.outsbook.examplekotlin
 
-import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.outsbook.libs.canvaseditor.listeners.CanvasEditorListener
@@ -15,80 +15,86 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initValue()
+        initClickListener()
+        initCanvasEditorListener()
+    }
 
+    private fun initValue(){
         buttonUndo.imageAlpha = 50
         buttonRedo.imageAlpha = 50
-
-        canvasEditorView.setListener(object: CanvasEditorListener {
-            override fun onEnableUndo(isEnable: Boolean) {
-                buttonUndo.imageAlpha = if(isEnable) 255 else 50
-            }
-            override fun onEnableRedo(isEnable: Boolean) {
-                buttonRedo.imageAlpha = if(isEnable) 255 else 50
-            }
-        })
-
         //set stroke width
-        canvasEditorView.setStrokeWidth(strokeWidth)
+        canvasEditor.setStrokeWidth(strokeWidth)
         //set paint color
-        canvasEditorView.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
+        canvasEditor.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
+    }
 
+    private fun initClickListener(){
         buttonSticker.setOnClickListener{
             //Add drawable sticker
             val drawable = ContextCompat.getDrawable(this, R.drawable.app_icon)
-            canvasEditorView.addDrawableSticker(drawable!!)
+            drawable?.let {
+                canvasEditor.addDrawableSticker(it)
+            }
         }
 
         buttonText.setOnClickListener{
             //Add text sticker
-            val color = ContextCompat.getColor(this, R.color.colorPrimary)
-            canvasEditorView.addTextSticker("Canvas", color, null)
+            val text = "Canvas"
+            val textColor = ContextCompat.getColor(this, R.color.colorPrimary)
+            canvasEditor.addTextSticker(text, textColor, null)
         }
 
         buttonStickerText.setOnClickListener{
             //Add text with drawable sticker
             val drawable = ContextCompat.getDrawable(this, R.drawable.ic_panorama_240dp)
-            val color = ContextCompat.getColor(this, R.color.colorAccent)
-            canvasEditorView.addDrawableTextSticker(drawable!!, "Canvas", color, null)
+            val text = "Canvas"
+            val textColor = ContextCompat.getColor(this, R.color.colorAccent)
+            drawable?.let{
+                canvasEditor.addDrawableTextSticker(it, text, textColor, null)
+            }
         }
 
         buttonBlack.setOnClickListener {
             buttonPlus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_plus_black_24dp))
             buttonMinus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_minus_black_24dp))
-            canvasEditorView.setPaintColor(ContextCompat.getColor(this, R.color.colorBlack))
+            val color = ContextCompat.getColor(this, R.color.colorBlack)
+            canvasEditor.setPaintColor(color)
         }
 
         buttonYellow.setOnClickListener {
             buttonPlus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_plus_yellow_24dp))
             buttonMinus.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_minus_yellow_24dp))
-            canvasEditorView.setPaintColor(ContextCompat.getColor(this, R.color.colorYellow))
+            val color = ContextCompat.getColor(this, R.color.colorYellow)
+            canvasEditor.setPaintColor(color)
         }
 
         buttonPlus.setOnClickListener {
             strokeWidth += 10f
-            canvasEditorView.setStrokeWidth(strokeWidth)
+            canvasEditor.setStrokeWidth(strokeWidth)
         }
 
         buttonMinus.setOnClickListener {
             strokeWidth -= 10f
-            canvasEditorView.setStrokeWidth(strokeWidth)
+            canvasEditor.setStrokeWidth(strokeWidth)
         }
 
         buttonSave.setOnClickListener {
-            val bitmap = canvasEditorView.downloadBitmap()
-            showPreview(bitmap)
+            val bitmap = canvasEditor.downloadBitmap()
+            imageView.setImageBitmap(bitmap)
+            viewImagePreview.visibility = View.VISIBLE
         }
 
         buttonUndo.setOnClickListener {
-            canvasEditorView.undo()
+            canvasEditor.undo()
         }
 
         buttonDelete.setOnClickListener {
-            canvasEditorView.removeAll()
+            canvasEditor.removeAll()
         }
 
         buttonRedo.setOnClickListener {
-            canvasEditorView.redo()
+            canvasEditor.redo()
         }
 
         buttonClose.setOnClickListener {
@@ -96,8 +102,43 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showPreview(bitmap: Bitmap){
-        viewImagePreview.visibility = View.VISIBLE
-        imageView.setImageBitmap(bitmap)
+    private fun initCanvasEditorListener(){
+        canvasEditor.setListener(object: CanvasEditorListener {
+            override fun onEnableUndo(isEnable: Boolean) {
+                // isEnable = true (undo list is not empty)
+                // isEnable = false (undo list is empty)
+                buttonUndo.imageAlpha = if(isEnable) 255 else 50
+            }
+
+            override fun onEnableRedo(isEnable: Boolean) {
+                // isEnable = true (redo list is not empty)
+                // isEnable = false (redo list is empty)
+                buttonRedo.imageAlpha = if(isEnable) 255 else 50
+            }
+
+            override fun onTouchEvent(event: MotionEvent) {
+                //When the canvas touch
+            }
+
+            override fun onStickerActive() {
+                //When a sticker change to active mode
+            }
+
+            override fun onStickerRemove() {
+                //When a sticker remove from canvas
+            }
+
+            override fun onStickerDone() {
+                //When the active sticker added to canvas
+            }
+
+            override fun onStickerZoomAndRotate() {
+                //When the active sticker zoom or rotate
+            }
+
+            override fun onStickerFlip() {
+                //When the active sticker flip
+            }
+        })
     }
 }
