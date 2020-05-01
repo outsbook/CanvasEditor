@@ -11,6 +11,7 @@ A Canvas/Image Editor library with easy support for canvas/image editing using p
 | [**Text Sticker**](#text-sticker) | [1. addTextSticker(text: String, textColor: Int, typeface: Typeface?)](#1-addtextStickertext-string-textcolor-int-typeface-typeface)<br>[2. addDrawableTextSticker(drawable: Drawable, text: String, textColor: Int, typeface: Typeface?)](#2-adddrawabletextstickerdrawable-drawable-text-string-textColor-int-typeface-typeface) |
 | [**Active Sticker Methods**](#active-sticker-methods) | [1. removeActiveSticker()](#1-removeactivesticker)<br>[2. doneActiveSticker()](#2-doneactivesticker)<br>[3. flipActiveSticker()](#3-flipactivesticker)<br>[4. zoomAndRotateActiveSticker(motionEvent: MotionEvent)](#4-zoomandrotateactivestickermotionevent-motionevent) |
 | [**Canvas Editor Methods**](#canvas-editor-methods) | [1. undo()](#1-undo)<br>[2. redo()](#2-redo)<br>[3. removeAll()](#3-removeall)<br>[4. downloadBitmap(): Bitmap](#4-downloadbitmap-bitmap) |
+| [**Canvas Editor Callback**](#setup-the-canvaseditor) |  |
 
 ## Getting Started
 To include the library in your project just simply add the dependencies. Choose one from Gradle, and Maven
