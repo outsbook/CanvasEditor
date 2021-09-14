@@ -128,6 +128,11 @@ class CanvasEditorView : RelativeLayout{
         mPaintView.paint.strokeWidth = strokeWidth
     }
 
+    fun setStrokeCap(strokeCap: Paint.Cap) {
+        doneStickerEdit()
+        mPaintView.paint.strokeCap = strokeCap
+    }
+
     //region add sticker
     fun addDrawableSticker(drawable: Drawable) {
         doneStickerEdit()
